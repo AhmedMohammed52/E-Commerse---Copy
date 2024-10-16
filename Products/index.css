@@ -1,0 +1,1065 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: fit-content;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .txtHead {
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 150px 0 50px;
+  border-bottom: 2px solid #95939365;
+  padding-bottom: 20px;
+}
+
+.container .txtHead h3 {
+  color: #333;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+.container .txtHead button {
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 13px;
+  letter-spacing: 2px;
+  border: 1px solid #333;
+  transition: 0.5s;
+}
+
+.container .txtHead button i {
+  font-size: 16px;
+}
+
+.container .txtHead button:hover {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.container .classify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container .classify .head {
+  padding-left: 80px;
+}
+
+.container .classify .head h2 {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #111;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.container .classify .head .u-line {
+  height: 0.3rem;
+  width: 4rem;
+  border-radius: 4rem;
+  display: block;
+  background-color: #333;
+  margin: 10px auto;
+  transition: width 0.8s;
+}
+
+.container .classify .head h2:hover + .u-line {
+  width: 8rem;
+}
+
+.container .classify #seeAll {
+  width: 130px;
+  padding: 7px 20px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  right: 140px;
+  background-color: transparent;
+  border: 1px solid #89888882;
+  transition: 0.5s;
+}
+
+.container .classify #seeAll:hover {
+  outline: 2px solid #89888882;
+  background-color: #333;
+  color: #fff;
+}
+
+.container .classify #seeAll i {
+  font-size: 14px;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .classify #seeAll:hover i {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+
+.container #boxes {
+  width: 100%;
+  height: 56vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background-color: #c8c5c520;
+}
+
+.container #boxes div {
+  width: 260px;
+  height: 370px;
+  margin: 35px;
+  border-radius: 8px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.container #boxes div:hover {
+  outline: 1px solid #82818165;
+  width: 265px;
+  height: 375px;
+  box-shadow: 1px 4px 5px #333;
+}
+
+.container #boxes div .text {
+  width: 100%;
+  padding: 5px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+}
+
+.container #boxes div .text h4 {
+  color: #333;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.container #boxes div .text span {
+  font-size: 17px;
+  color: #333;
+  opacity: 0.7;
+}
+
+.container #boxes div .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 15px;
+  position: absolute;
+  bottom: 7px;
+}
+
+.container #boxes div .line button {
+  padding: 3px 5px;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #88888873;
+  color: #333;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.container #boxes div .line button:hover {
+  padding: 5px 7px;
+  box-shadow: 1px 4px 5px #0000008c;
+}
+
+.container #boxes div .line i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.container #boxes div .line i:hover {
+  font-size: 22px;
+  opacity: 0.8;
+  text-shadow: 1px 4px 5px #0000008c;
+}
+
+.container #boxes div .img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container #boxes div .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+}
+
+.container #boxes div .img #backImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.container #boxes div .img:hover #frontImg {
+  opacity: 0;
+}
+
+.container #boxes div .img:hover #backImg {
+  opacity: 1;
+}
+
+nav {
+  width: 90%;
+  background-color: #ffffff28;
+  backdrop-filter: blur(10px);
+  border: 2px solid #3333331e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  margin: 20px 0 0 0;
+}
+
+nav h2 {
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 50px;
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav .icons {
+  margin-right: 40px;
+}
+
+nav .icons i {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0 7px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover,
+nav .icons i:hover {
+  opacity: 0.7;
+}
+
+.classifyTwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.classifyTwo .hu {
+  padding-left: 80px;
+}
+
+.classifyTwo .hu h2 {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #111;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.classifyTwo .hu .u-line {
+  height: 0.3rem;
+  width: 3rem;
+  border-radius: 4rem;
+  display: block;
+  background-color: #333;
+  margin: 10px auto;
+  transition: width 0.8s;
+}
+
+.classifyTwo .hu h2:hover + .u-line {
+  width: 6rem;
+}
+
+.classifyTwo #see {
+  width: 130px;
+  padding: 7px 20px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  right: 140px;
+  background-color: transparent;
+  border: 1px solid #89888882;
+  transition: 0.5s;
+}
+
+.classifyTwo #see:hover {
+  outline: 2px solid #89888882;
+  background-color: #333;
+  color: #fff;
+}
+
+.classifyTwo #see i {
+  font-size: 14px;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.classifyTwo #see:hover i {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+
+.StarsBox {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.StarsBox #boxess {
+  width: 100%;
+  height: 56vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  background-color: #c8c5c520;
+}
+
+.StarsBox #boxess div {
+  width: 260px;
+  height: 370px;
+  margin: 35px;
+  border-radius: 8px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.StarsBox #boxess div:hover {
+  outline: 1px solid #82818165;
+  width: 265px;
+  height: 375px;
+  box-shadow: 1px 4px 5px #333;
+}
+
+.StarsBox #boxess div .text {
+  width: 100%;
+  padding: 5px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+}
+
+.StarsBox #boxess div .text h4 {
+  color: #333;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.StarsBox #boxess div .text span {
+  font-size: 17px;
+  color: #333;
+  opacity: 0.7;
+}
+
+.StarsBox #boxess div .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 15px;
+  position: absolute;
+  bottom: 7px;
+}
+
+.StarsBox #boxess div .line button {
+  padding: 3px 5px;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #88888873;
+  color: #333;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.StarsBox #boxess div .line button:hover {
+  padding: 5px 7px;
+  box-shadow: 1px 4px 5px #0000008c;
+}
+
+.StarsBox #boxess div .line i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.StarsBox #boxess div .line i:hover {
+  font-size: 22px;
+  opacity: 0.8;
+  text-shadow: 1px 4px 5px #0000008c;
+}
+
+.StarsBox #boxess div .img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.StarsBox #boxess div .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+}
+
+.StarsBox #boxess div .img #backImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.StarsBox #boxess div .img:hover #frontImg {
+  opacity: 0;
+}
+
+.StarsBox #boxess div .img:hover #backImg {
+  opacity: 1;
+}
+
+.classifyThree {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.classifyThree .hul {
+  padding-left: 80px;
+}
+
+.classifyThree .hul h2 {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #111;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.classifyThree .hul .u-line {
+  height: 0.3rem;
+  width: 3rem;
+  border-radius: 4rem;
+  display: block;
+  background-color: #333;
+  margin: 10px auto;
+  transition: width 0.8s;
+}
+
+.classifyThree .hul h2:hover + .u-line {
+  width: 6rem;
+}
+
+.classifyThree #seee {
+  width: 130px;
+  padding: 7px 20px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  right: 140px;
+  background-color: transparent;
+  border: 1px solid #89888882;
+  transition: 0.5s;
+}
+
+.classifyThree #seee:hover {
+  outline: 2px solid #89888882;
+  background-color: #333;
+  color: #fff;
+}
+
+.classifyThree #seee i {
+  font-size: 14px;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.classifyThree #seee:hover i {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+
+.gloves {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gloves #boxesss {
+  width: 100%;
+  height: 56vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background-color: #c8c5c520;
+}
+
+.gloves #boxesss div {
+  width: 260px;
+  height: 370px;
+  margin: 35px;
+  border-radius: 8px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.gloves #boxesss div:hover {
+  outline: 1px solid #82818165;
+  width: 265px;
+  height: 375px;
+  box-shadow: 1px 4px 5px #333;
+}
+
+.gloves #boxesss div .text {
+  width: 100%;
+  height: 20%;
+  padding: 5px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.gloves #boxesss div .text h4 {
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+}
+
+.gloves #boxesss div .text .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gloves #boxesss div .text .col span {
+  font-size: 17px;
+  color: #333;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.gloves #boxesss div .text .col i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+
+.gloves #boxesss div .text .col i:hover {
+  font-size: 22px;
+  opacity: 0.8;
+  text-shadow: 1px 4px 5px #0000008c;
+}
+
+.gloves #boxesss div .img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gloves #boxesss div .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+}
+
+.gloves #boxesss div .img #backImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.gloves #boxesss div .img:hover #frontImg {
+  opacity: 0;
+}
+
+.gloves #boxesss div .img:hover #backImg {
+  opacity: 1;
+}
+
+.classifyBag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.classifyBag .hulB {
+  padding-left: 80px;
+}
+
+.classifyBag .hulB h2 {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #111;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.classifyBag .hulB .u-line {
+  height: 0.3rem;
+  width: 3rem;
+  border-radius: 8rem;
+  display: block;
+  background-color: #333;
+  margin: 10px auto;
+  transition: width 0.8s;
+}
+
+.classifyBag .hulB h2:hover + .u-line {
+  width: 11rem;
+}
+
+.classifyBag #seeB {
+  width: 130px;
+  padding: 7px 20px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  right: 140px;
+  background-color: transparent;
+  border: 1px solid #89888882;
+  transition: 0.5s;
+}
+
+.classifyBag #seeB:hover {
+  outline: 2px solid #89888882;
+  background-color: #333;
+  color: #fff;
+}
+
+.classifyBag #seeB i {
+  font-size: 14px;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.classifyBag #seeB:hover i {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+
+.bag {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bag #boxesBag {
+  width: 100%;
+  height: 56vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background-color: #c8c5c520;
+}
+
+.bag #boxesBag div {
+  width: 260px;
+  height: 370px;
+  margin: 35px;
+  border-radius: 8px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.bag #boxesBag div:hover {
+  outline: 1px solid #82818165;
+  width: 265px;
+  height: 375px;
+  box-shadow: 1px 4px 5px #333;
+}
+
+.bag #boxesBag div .text {
+  width: 100%;
+  height: 20%;
+  padding: 5px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.bag #boxesBag div .text h4 {
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+}
+
+.bag #boxesBag div .text .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bag #boxesBag div .text .col span {
+  font-size: 17px;
+  color: #333;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.bag #boxesBag div .text .col i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+
+.bag #boxesBag div .text .col i:hover {
+  font-size: 22px;
+  opacity: 0.8;
+  text-shadow: 1px 4px 5px #0000008c;
+}
+
+.bag #boxesBag div .img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bag #boxesBag div .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+}
+
+.bag #boxesBag div .img #backImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.bag #boxesBag div .img:hover #frontImg {
+  opacity: 0;
+}
+
+.bag #boxesBag div .img:hover #backImg {
+  opacity: 1;
+}
+
+.classifyFour {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.classifyFour .hulW {
+  padding-left: 80px;
+}
+
+.classifyFour .hulW h2 {
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #111;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.classifyFour .hulW .u-line {
+  height: 0.3rem;
+  width: 3rem;
+  border-radius: 8rem;
+  display: block;
+  background-color: #333;
+  margin: 10px auto;
+  transition: width 0.8s;
+}
+
+.classifyFour .hulW h2:hover + .u-line {
+  width: 11rem;
+}
+
+.classifyFour #seeW {
+  width: 130px;
+  padding: 7px 20px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  right: 140px;
+  background-color: transparent;
+  border: 1px solid #89888882;
+  transition: 0.5s;
+}
+
+.classifyFour #seeW:hover {
+  outline: 2px solid #89888882;
+  background-color: #333;
+  color: #fff;
+}
+
+.classifyFour #seeW i {
+  font-size: 14px;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.classifyFour #seeW:hover i {
+  opacity: 1;
+  visibility: visible;
+  color: #fff;
+}
+
+.watch {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.watch #boxesWatch {
+  width: 100%;
+  height: 56vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background-color: #c8c5c520;
+}
+
+.watch #boxesWatch div {
+  width: 260px;
+  height: 370px;
+  margin: 35px;
+  border-radius: 8px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.watch #boxesWatch div:hover {
+  outline: 1px solid #82818165;
+  width: 265px;
+  height: 375px;
+  box-shadow: 1px 4px 5px #333;
+}
+
+.watch #boxesWatch div .text {
+  width: 100%;
+  padding: 5px 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+}
+
+.watch #boxesWatch div .text h4 {
+  color: #333;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.watch #boxesWatch div .text span {
+  font-size: 17px;
+  color: #333;
+  opacity: 0.7;
+}
+
+.watch #boxesWatch div .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 15px;
+  position: absolute;
+  bottom: 7px;
+}
+
+.watch #boxesWatch div .line button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #88888873;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.watch #boxesWatch div .line button:first-child {
+  background-color: black;
+}
+
+.watch #boxesWatch div .line button:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.358);
+}
+
+.watch #boxesWatch div .line button:nth-child(3) {
+  background-color: rgba(36, 75, 36, 0.551);
+}
+
+.watch #boxesWatch div .line button:nth-child(4) {
+  background-color: #1d1dab;
+}
+
+.watch #boxesWatch div .line button:hover {
+  padding: 5px 7px;
+  box-shadow: 1px 4px 5px #0000008c;
+}
+
+.watch #boxesWatch div .line i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.watch #boxesWatch div .line i:hover {
+  font-size: 22px;
+  opacity: 0.8;
+  text-shadow: 1px 4px 5px #0000008c;
+}
+
+.watch #boxesWatch div .img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.watch #boxesWatch div .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+}
+
+.watch #boxesWatch div .img #backImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.watch #boxesWatch div .img:hover #frontImg {
+  opacity: 0;
+}
+
+.watch #boxesWatch div .img:hover #backImg {
+  opacity: 1;
+}
